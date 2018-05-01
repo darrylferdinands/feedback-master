@@ -1,0 +1,60 @@
+/* CSS declarations go here */
+ul{
+    margin-top: 5em;
+}
+button a{
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 18px;
+    font-weight: 400;
+}
+.accounts-dialog{
+    width: 20em;
+    font-size: 18px;
+    color: white;
+    background-color: #0c1f47;
+}
+.accounts-dialog input{
+    width: 80% !important;
+    float: right;
+    
+}
+#login-email-label-and-input{
+    margin-bottom: 1em;
+    color: white;   
+}
+#login-email{
+    color: black;   
+}
+
+#forgot-password-email{
+    color: black;
+}
+
+#login-password{
+    color: black;   
+}
+
+form{
+    margin-top: 2em;
+
+    
+}
+
+.logout{
+    float: right;
+    position: relative;
+    margin-top: -2em;
+    margin-right: 2em;
+    z-index: 1;
+}
+div.jumbotron{
+    z-index: -1;
+    background-color: #3b5998;
+}
+
+.buttonlogin{
+    background-color: #3b5998;
+    border-color: #3b5998;
+
+}
