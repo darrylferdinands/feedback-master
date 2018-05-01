@@ -1,0 +1,72 @@
+<head>
+  <title>feedbook</title>
+</head>
+
+<body>
+  <div class="jumbotron">
+    {{#if currentUser}}
+    <button class="btn btn-danger logout" 
+    style=" font-size: 17px;
+    font-weight: 700;
+    background-color: #3b5998; 
+    border-color:#3b5998 ;  
+    color: white;">Log Out</button>
+     {{/if}} 
+    <h1 style="text-align:center; color: whitesmoke "><b>feedbook</b></h1>
+  </div>
+  
+  <div class="container" style="margin-top: 50px">
+    {{log currentUser}}
+    <div align="center">
+      {{#unless currentUser}}
+      <button type="button" aria-setsize="15px" class="buttonlogin" 
+        style="padding-right: 75px; 
+              padding-left: 75px;
+              padding-bottom: 25px;
+              padding-top: 25px;" >{{> loginButtons}}
+          <!-- <div id="login-buttons" class="login-buttons-dropdown-align-">  
+            <div class="login-link-and-dropdown-list login-form-sign-in">
+               <a class="login-link-text" id="login-sign-in-link">Login ▾</a>
+            </div> 
+          </div>-->
+            
+      </button>
+      {{/unless}}
+
+      <!-- {{#unless currentUser}}
+      <button type="button" aria-setsize="15px" class="buttonlogin" 
+        style="padding-right: 75px; 
+              padding-left: 75px;
+              padding-bottom: 25px;
+              padding-top: 25px;
+              margin-left: 25px;" >
+              <div id="login-buttons" class="login-buttons-dropdown-align-">  
+                <div class="login-link-and-dropdown-list login-form-sign-in">
+                   <a class="additional-link" id="signup-link">Create an Account</a>
+                </div> 
+              </div>    
+      </button>
+      {{/unless}} -->
+    </div>
+  
+        {{#if currentUser}}
+        <form class="new-comment" method="POST" >      
+          <input type="text" name="comment" placeholder="Please enter your comment here ..." class="form-control" />
+          <h3 style="text-align: center; color:#3b5998; font-size: 40px; padding-top: 30px;"><b>Comments</b></h3></form>
+    <ul class="list-group" style="margin: 1px">
+      {{#each ShowComments}} 
+        {{>comment}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</body>
+
+<template name="comment">
+  <li class="list-group-item"><span>{{text}}</span>
+  {{log isowner}}
+    <span class="badge delete" style="color: red;background: transparent;font-size:1.2em;cursor:pointer;">&times;</span>
+    {{log owner}}
+    <span class="badge">{{email}}</span>
+  </li>
+</template>
