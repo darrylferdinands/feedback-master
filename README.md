@@ -1,4 +1,4 @@
-#Feed using Meteor.Js
+# Feed using Meteor.Js
 
 A cloud app, that provides a discussion board to its customers. The application has two screens/pages: 
 (1) Landing page is a log-in page, where a customer can provide an email/password to create/log-in into the application, and 
