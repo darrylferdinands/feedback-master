@@ -1,7 +1,3 @@
-
-#ZipBoard
-
-
 #Feed using Meteor.Js
 
 A cloud app, that provides a discussion board to its customers. The application has two screens/pages: 
